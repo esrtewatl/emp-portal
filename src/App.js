@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import EmployeeDashboard from "./EmployeeDashboard";
+import DailyEventsForum from "./DailyEventsForum";
+import "./App.css";
 
 function App() {
+  const [employees, setEmployees] = useState([]);
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    fetch("https://api.example.com/employees")
+      .then((response) => response.json())
+      .then((data) => setEmployees(data))
+      .catch((error) => console.error(error));
+
+    fetch("https://api.example.com/posts")
+      .then((response) => response.json())
+      .then((data) => setPosts(data))
+      .catch((error) => console.error(error));
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     
+      <EmployeeDashboard employees={employees} posts={posts} />
+      <DailyEventsForum />
+    
     </div>
   );
 }

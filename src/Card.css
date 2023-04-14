@@ -1,0 +1,25 @@
+.employee-card {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+}
+
+.employee-name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.employee-position {
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.employee-department {
+  margin-top: 5px;
+}
+
+.employee-email {
+  margin-top: 5px;
+  font-weight: bold;
+  color: blue;
+}

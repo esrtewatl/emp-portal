@@ -1,0 +1,25 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "position": "Manager",
+      "department": "Sales",
+      "email": "john.doe@example.com"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "position": "Software Engineer",
+      "department": "Engineering",
+      "email": "jane.smith@example.com"
+    },
+    {
+      "id": 3,
+      "name": "Bob Johnson",
+      "position": "Accountant",
+      "department": "Finance",
+      "email": "bob.johnson@example.com"
+    }
+  ]
+}
